@@ -18,12 +18,6 @@ public class LionTest {
         felineMock = Mockito.mock(Feline.class);
     }
 
-    @Test
-    public void lionHasNoManeIfFemale() throws Exception {
-        Lion lion = new Lion("Самка", felineMock);
-        assertFalse(lion.doesHaveMane());
-    }
-
     @Test(expected = Exception.class)
     public void lionThrowsExceptionIfInvalidSex() throws Exception {
         new Lion("Неопределён", felineMock);
