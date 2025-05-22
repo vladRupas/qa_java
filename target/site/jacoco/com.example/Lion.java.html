@@ -5,13 +5,13 @@ import java.util.List;
 public class Lion {
 
     private final boolean hasMane;
-    private final IFeline feline;
+    private final Feline feline;
 
-<span class="fc" id="L10">    public Lion(String sex, IFeline feline) throws Exception {</span>
+<span class="fc" id="L10">    public Lion(String sex, Feline feline) throws Exception {</span>
 <span class="fc bfc" id="L11" title="All 2 branches covered.">        if (&quot;Самец&quot;.equals(sex)) {</span>
-<span class="fc" id="L12">            hasMane = true;</span>
+<span class="fc" id="L12">            this.hasMane = true;</span>
 <span class="fc bfc" id="L13" title="All 2 branches covered.">        } else if (&quot;Самка&quot;.equals(sex)) {</span>
-<span class="fc" id="L14">            hasMane = false;</span>
+<span class="fc" id="L14">            this.hasMane = false;</span>
         } else {
 <span class="fc" id="L16">            throw new Exception(&quot;Используйте допустимые значения пола животного - самец или самка&quot;);</span>
         }
@@ -29,5 +29,6 @@ public class Lion {
     public List&lt;String&gt; getFood() throws Exception {
 <span class="fc" id="L30">        return feline.getFood(&quot;Хищник&quot;);</span>
     }
+
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

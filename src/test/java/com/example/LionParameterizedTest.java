@@ -1,5 +1,5 @@
-import com.example.IFeline;
-import com.example.Lion;
+package com.example;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -31,10 +31,8 @@ public class LionParameterizedTest {
 
     @Test
     public void testDoesHaveMane() throws Exception {
-        IFeline felineMock = Mockito.mock(IFeline.class);
-
+        Feline felineMock = Mockito.mock(Feline.class);
         Lion lion = new Lion(sex, felineMock);
-
         assertEquals(expectedHasMane, lion.doesHaveMane());
     }
 }
